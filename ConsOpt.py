@@ -1,6 +1,5 @@
 import numpy as np
 import re
-import time
 
 ###set parametert
 alpha = 37*100;beta = 1/20;theta = 200;K = 6;gamma = 0.1*2*K*alpha
