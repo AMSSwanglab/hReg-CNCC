@@ -1,5 +1,0 @@
-The inputs of consensus optimization are K (6) files of networks:
-TF  TG  Sij FDR CRM
-
-The input of SNP annotation is GWAS summary statistics with p-value <= 1e-5:
-chr  start  end  SNP_Name  p-value
