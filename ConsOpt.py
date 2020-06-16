@@ -1,7 +1,7 @@
 import numpy as np
 import re
 
-###set parametert
+###set parameterts
 alpha = 37*100;beta = 1/20;theta = 200;K = 6;gamma = 0.1*2*K*alpha
 
 def GetRes(meanS, meanC, L, thre, cut, chros, start):
