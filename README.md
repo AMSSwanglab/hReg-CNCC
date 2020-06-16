@@ -19,7 +19,7 @@ The input of SNP annotation is GWAS summary statistics with p-value <= 1e-5:<br>
 chr　start　end　SNP_Name　p-value　Allele1　Allele2; Seperated by tab<br>
 ### Codes
 ```bash
-python ConsOpt.py
+python AnnoFaceGWAS.py
 ```
 ## Requirements
 python3 <br>
