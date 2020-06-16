@@ -4,7 +4,7 @@ hReg-CNCC is a high-quality Regulatory network of Cranial Neural Crest Cell (CNC
 ## Consensen Network
 ### Inputs
 The inputs of consensus optimization are K (6) files of networks:<br>
-TF　TG　Sij FDR　CRM; Seperated by tab<br>
+TF　TG　Sij　FDR　CRM; Seperated by tab<br>
 Examples are given in **Input** folder
 ### Codes
 ```bash
@@ -15,7 +15,9 @@ python ConsOpt.py
 The input of SNP annotation is GWAS summary statistics with p-value <= 1e-5:<br>
 chr　start　end　SNP_Name　p-value; Seperated by tab<br>
 ### Codes
-
+```bash
+python ConsOpt.py
+```
 ## Requirements
 python3 <br>
 numpy <br>
