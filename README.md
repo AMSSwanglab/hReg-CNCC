@@ -3,7 +3,7 @@ hReg-CNCC is a high-quality Regulatory network of Cranial Neural Crest Cell (CNC
 
 ## Consensen Network
 
-Software requirements: <br>
+## Requirements:
 python3 <br>
 numpy <br>
 bedtools <br>
