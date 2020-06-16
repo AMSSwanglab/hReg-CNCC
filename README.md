@@ -9,6 +9,9 @@ Examples are given in **Input** folder
 ### Codes
 ```bash
 python ConsOpt.py
+cat ./Results/CNCCNetwork.txt | awk '{print $4}' | tr '_' '\t' | tr ';' '\n' | sortBed > ./Results/CNCCNetwork_RE1.txt
+mergeBed -i ./Results/CNCCNetwork_RE1.txt > ./Results/CNCCNetwork_RE2.txt
+bedtools intersect -wa -wb -a ./Results/CNCCNetwork_RE1.txt -b ./Results/CNCCNetwork_RE2.txt | awk '{print $1"_"$2"_"$3"\t"$4"_"$5"_"$6}' > ./Results/CNCCNetwork_RE1_RE2.txt
 ```
 ## Annotating SNPs of Face GWAS
 ### Input
