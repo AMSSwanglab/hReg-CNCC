@@ -20,6 +20,11 @@ chr　start　end　SNP_Name　p-value　Allele1　Allele2; Seperated by tab<br>
 ### Codes
 ```bash
 bedtools intersect -wa -wb -a ./Input/FaceDisGWAS_e5.bed -b ./Results/CNCCNetwork_RE1.bed > FaceDisGWAS_SNP_RE.txt
+for RE in `cat FaceDisGWAS_SNP_RE.txt | awk '{print $11}'`
+do
+  cat ./Results/CNCCNetwork.txt | grep $RE >> a
+done
+sort -k3nr a > FaceDisGWAS_Net_Sorted.txt; rm -f a;
 python AnnoFaceGWAS.py
 ```
 The output file is **FaceDisGWAS_Net_Filtered.txt**, which can be used for visualization and further analysis.<br>
