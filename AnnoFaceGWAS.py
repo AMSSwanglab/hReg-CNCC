@@ -14,7 +14,7 @@ for i in range(len(a)):
 	a[i] = a[i].strip('\n').split('\t')
 	RE12[0].append(a[i][0])
 	RE12[1].append(a[i][1])
-f = open('FaceDisGWAS_Net_sort.txt')
+f = open('FaceDisGWAS_Net_Sorted.txt')
 a = f.readlines();f.close()
 TG = [a[0].split('\t')[1]]
 tmp = [];score = []
