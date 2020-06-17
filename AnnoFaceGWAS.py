@@ -1,13 +1,13 @@
 import numpy as np
 
-f = open('FaceDisGWAS_SNP_RE.txt')
+f = open('./Results/FaceDisGWAS_SNP_RE.txt')
 a = f.readlines();f.close()
 RE_SNP = [[],[]]
 for i in range(len(a)):
 	a[i] = a[i].strip('\n').split('\t')
 	RE_SNP[0].append(a[i][10])
 	RE_SNP[1].append(a[i][3])
-f = open('CNCCNetwork_RE1_RE2.txt')
+f = open('./Results/CNCCNetwork_RE1_RE2.txt')
 a = f.readlines();f.close()
 RE12 = [[],[]]
 for i in range(len(a)):
@@ -18,7 +18,7 @@ f = open('FaceDisGWAS_Net_sort.txt')
 a = f.readlines();f.close()
 TG = [a[0].split('\t')[1]]
 tmp = [];score = []
-g = open('FaceDisGWAS_Net_Filtered.txt','w')
+g = open('./Results/FaceDisGWAS_Net_Filtered.txt','w')
 for i in range(len(a)):
 	a[i] = a[i].strip('\n').split('\t')
 	if a[i][1] in TG and i < len(a)-1:
