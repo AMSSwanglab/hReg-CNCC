@@ -29,6 +29,23 @@ python AnnoFaceGWAS.py
 ```
 The output file is **FaceDisGWAS_Net_Filtered.txt**, which can be used for visualization and further analysis.<br>
 
+## Annotating Human Ultraconserved Elements
+### Input
+The input is bed file of **Human Ultraconserved Elements**:<br>
+chr　start　end; Seperated by tab<br>
+### Codes
+```bash
+bedtools intersect -wa -wb -a ./Input/UltraConserved_hg19.bed -b ./Results/CNCCNetwork_RE1.bed > ./Results/ConservedRE_RE.txt
+for RE in `cat ./Results/ConservedRE_RE.txt | awk '{print $7}'`
+do
+	cat ./Results/CNCCNetwork.txt | grep $RE >> a
+done
+cat a | sort | uniq > ./Results/ConservedRE_Net.txt;rm -f a
+sort -k2 ./Results/ConservedRE_Net.txt > ConservedRE_Net_Sorted.txt
+python AnnoConsElements.py
+```
+The output file is **ConservedRE_Net_Filtered.txt**, which can also be used for visualization and further analysis.<br>
+
 ## Requirements
 python3 <br>
 numpy <br>
